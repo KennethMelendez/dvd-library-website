@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DVD</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main" id="main">
+            <div class="row header">
+                <div class="col-sm">
+                    <button id="create-btn" type="button" class="btn btn-danger">Create DVD</button>
+                </div>
+                <div class="col-sm">
+                    <button id="search-dvd-btn" type="button" class="btn btn-secondary">Search</button>
+                </div>
+                <div class="col-sm">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Search Category
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button" data-title="title" id="title">Title</button>
+                            <button class="dropdown-item" type="button" data-releaseYear="releaseYear" id="release-date">Release Date</button>
+                            <button class="dropdown-item" type="button" data-director="director" id="director">Director</button>
+                            <button class="dropdown-item" type="button" data-rating="rating" id="rating">Rating</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Search Term</span>
+                        </div>
+                        <input type="text" id="search-box" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="content">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Release Date</th>
+                            <th scope="col">Director</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="dvd-print">
+                        <!-- <tr>
+                            <th scope="row">Pokemon The First Movie</th>
+                            <td>1999</td>
+                            <td>Kunihiko Yuyama</td>
+                            <td>PG</td>
+                            <td><a id="edit-btn-tbl">Edit</a> | <a id="delete-btn-tbl">Delete</a></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- end of main -->
+
+        <!-- EDIT DVD -->
+
+        <div class="edit-dvd" id="edit-dvd">
+            <div class="dvd-head">
+                <h1 id="edit-result"></h1>
+                <hr>
+                <div class="dvd-title">
+                    <label for="title">
+                        <b>Dvd Title:</b>
+                    </label>
+                    <input id="edit-title" name="title" type="text">
+                </div>
+
+                <div class="release-year">
+                    <label for="release">
+                        <b>Release Year:</b>
+                    </label>
+                    <input id="edit-release" type="text" name="release">
+                </div>
+
+                <div class="director-edit">
+                    <label for="director">
+                        <b>Director:</b>
+                    </label>
+                    <input id="edit-director" type="text" name="director">
+                </div>
+
+                <div class="rating-edit">
+                    <label for="rating">
+                        <b>Rating:</b>
+                    </label>
+                    <input id="edit-rating" type="text" name="rating">
+                </div>
+                <b>Comments:</b>
+                <div class="comment-box">
+                    <!-- <label for="comments"> -->
+
+                    <!-- </label> -->
+                    <textarea name="comments" id="comments" cols="100" rows="10"></textarea>
+                </div>
+                <div class="edit-dvd-btn">
+                    <button type="button" id="edit-btn-submit" class="btn btn-warning">Edit Dvd</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- add dvd -->
+
+
+
+        <div class="add-dvd" id="add-dvd">
+            <div class="add-dvd-head">
+                <h1>Add Dvd</h1>
+                <hr>
+                <div class="dvd-title">
+                    <label for="title">
+                        <b>Dvd Title:</b>
+                    </label>
+                    <input id="add-dvd-title" name="title" type="text">
+                </div>
+
+                <div class="release-year">
+                    <label for="release">
+                        <b>Release Year:</b>
+                    </label>
+                    <input id="add-release" type="text" name="release">
+                </div>
+
+                <div class="director-edit">
+                    <label for="director">
+                        <b>Director:</b>
+                    </label>
+                    <input id="add-director" type="text" name="director">
+                </div>
+
+                <div class="director-edit">
+                    <label for="rating">
+                        <b>Rating:</b>
+                    </label>
+                    <input id="add-rating" type="text" name="rating">
+                </div>
+                <b>Comments:</b>
+                <div class="comment-box">
+                    <!-- <label for="comments"> -->
+
+                    <!-- </label> -->
+                    <textarea name="comments" id="add-comments" cols="100" rows="10"></textarea>
+                </div>
+                <div class="add-dvd-btn" id="add-dvd-btn">
+                    <button type="button" id="add-btn" class="btn btn-warning">Add Dvd</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <!--end of container-->
+
+
+
+    <!-- #5: Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

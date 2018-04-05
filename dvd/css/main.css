@@ -1,0 +1,51 @@
+
+/* html{
+    background:url("../images/bg.JPG");
+    background-size: cover;
+}
+.container{
+    background:black;
+    color:white;
+} */
+
+.header {
+    margin-top: 80px;
+}
+
+button {
+    background:none;
+    border:none;
+
+}
+
+button:hover{
+    color:tomato;
+    cursor:pointer;
+}
+
+.edit-dvd{
+    margin-top:10px;
+}
+.edit-dvd-btn{
+    margin-top:10px;
+}
+
+.add-dvd{
+    margin-top:10px;
+}
+
+label{
+    margin-right: 50px;
+}
+
+input{
+    width:100%;
+}
+
+textarea{
+    margin-top:10px;
+}
+
+a:hover{
+    cursor:pointer;
+}
